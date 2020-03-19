@@ -14,3 +14,10 @@ output "lb_backend_pool_id" {
   value = azurerm_lb_backend_address_pool.this.id
 }
 
+output "lb_health_probe_id" {
+  value = azurerm_lb_probe.node-synced.id
+}
+
+output "lb_rpc_rule_id" {
+  value = azurerm_lb_rule.substrate-rpc.id
+}

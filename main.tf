@@ -41,3 +41,27 @@ resource "azurerm_lb_backend_address_pool" "this" {
   resource_group_name = data.azurerm_resource_group.this.name
 }
 
+resource "azurerm_lb_probe" "node-synced" {
+  loadbalancer_id     = azurerm_lb.this.id
+  name                = "node-sync-hc"
+  port                = 5500
+  protocol            = "Http"
+  request_path        = "/"
+  resource_group_name = data.azurerm_resource_group.this.name
+}
+
+resource "azurerm_lb_rule" "substrate-rpc" {
+  name            = "substrateRPC"
+  loadbalancer_id = azurerm_lb.this.id
+
+  frontend_ip_configuration_name = "api-lb-pub-ip"
+  frontend_port                  = 9933
+
+  backend_address_pool_id = azurerm_lb_backend_address_pool.this.id
+  backend_port            = 9933
+  probe_id                = azurerm_lb_probe.node-synced.id
+
+  load_distribution   = "SourceIPProtocol"
+  protocol            = "Tcp"
+  resource_group_name = data.azurerm_resource_group.this.name
+}

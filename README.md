@@ -51,8 +51,10 @@ No issue is creating limit on this module.
 |------|-------------|
 | lb\_backend\_pool\_id | n/a |
 | lb\_frontend\_ip\_config\_name | n/a |
+| lb\_health\_probe\_id | n/a |
 | lb\_id | n/a |
 | lb\_public\_ip | n/a |
+| lb\_rpc\_rule\_id | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
