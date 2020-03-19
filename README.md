@@ -49,6 +49,7 @@ No issue is creating limit on this module.
 
 | Name | Description |
 |------|-------------|
+| lb\_backend\_pool\_id | n/a |
 | lb\_frontend\_ip\_config\_name | n/a |
 | lb\_id | n/a |
 | lb\_public\_ip | n/a |

@@ -35,3 +35,9 @@ resource "azurerm_lb" "this" {
   }
 }
 
+resource "azurerm_lb_backend_address_pool" "this" {
+  loadbalancer_id     = azurerm_lb.this.id
+  name                = "BackendAddressPool"
+  resource_group_name = data.azurerm_resource_group.this.name
+}
+
