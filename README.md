@@ -1,11 +1,12 @@
 # terraform-polkadot-azure-api-lb
 
-[![open-issues](https://img.shields.io/github/issues-raw/insight-infrastructure/terraform-polkadot-azure-api-lb?style=for-the-badge)](https://github.com/insight-infrastructure/terraform-polkadot-azure-api-lb/issues)
-[![open-pr](https://img.shields.io/github/issues-pr-raw/insight-infrastructure/terraform-polkadot-azure-api-lb?style=for-the-badge)](https://github.com/insight-infrastructure/terraform-polkadot-azure-api-lb/pulls)
+[![open-issues](https://img.shields.io/github/issues-raw/insight-w3f/terraform-polkadot-azure-api-lb?style=for-the-badge)](https://github.com/insight-w3f/terraform-polkadot-azure-api-lb/issues)
+[![open-pr](https://img.shields.io/github/issues-pr-raw/insight-w3f/terraform-polkadot-azure-api-lb?style=for-the-badge)](https://github.com/insight-w3f/terraform-polkadot-azure-api-lb/pulls)
+[![build-status](https://circleci.com/gh/insight-w3f/terraform-polkadot-azure-api-lb.svg?style=svg)](https://circleci.com/gh/insight-w3f/terraform-polkadot-azure-api-lb)
 
 ## Features
 
-This module...
+This module creates the necessary infrastructure for a load balanced endpoint for Polkadot nodes running on Azure.
 
 ## Terraform Versions
 
@@ -15,13 +16,13 @@ For Terraform v0.12.0+
 
 ```
 module "this" {
-    source = "github.com/insight-infrastructure/terraform-polkadot-azure-api-lb"
+    source = "github.com/insight-w3f/terraform-polkadot-azure-api-lb"
 
 }
 ```
 ## Examples
 
-- [defaults](https://github.com/insight-infrastructure/terraform-polkadot-azure-api-lb/tree/master/examples/defaults)
+- [defaults](https://github.com/insight-w3f/terraform-polkadot-azure-api-lb/tree/master/examples/defaults)
 
 ## Known  Issues
 No issue is creating limit on this module.
