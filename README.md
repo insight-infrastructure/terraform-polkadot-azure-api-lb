@@ -15,9 +15,14 @@ For Terraform v0.12.0+
 ## Usage
 
 ```
-module "this" {
-    source = "github.com/insight-w3f/terraform-polkadot-azure-api-lb"
+resource "azurerm_resource_group" "this" {
+  location = "eastus"
+  name     = "resource-group-name"
+}
 
+module "this" {
+  source = "github.com/insight-w3f/terraform-polkadot-azure-api-lb"
+  azure_resource_group_name = azurerm_resource_group.this.name   
 }
 ```
 ## Examples
