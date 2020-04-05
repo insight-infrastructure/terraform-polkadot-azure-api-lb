@@ -40,8 +40,8 @@ variable "owner" {
   default     = ""
 }
 
-variable "zone" {
-  description = "The Azure zone to deploy in"
+variable "region" {
+  description = "The Azure region to deploy in"
   type        = string
   default     = "eastus"
 }
