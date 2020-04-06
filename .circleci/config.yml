@@ -20,13 +20,6 @@ jobs:
           command: go test ~/project/test -v -timeout 60m
           no_output_timeout: 60m
           name: "go test"
-      - run:
-          name: Destroy on failure
-          command: |
-            wget https://github.com/gruntwork-io/cloud-nuke/releases/download/v0.1.13/cloud-nuke_linux_amd64 -O ./cloud-nuke
-            chmod +x ./cloud-nuke
-            ./cloud-nuke aws --force
-          when: on_fail
 orbs:
   go: circleci/go@0.2.0
   node: circleci/node@1.1.6
@@ -36,4 +29,4 @@ workflows:
   default:
     jobs:
       - test:
-          context: azure-polkadot-testing
+          context: azure-ci-1
