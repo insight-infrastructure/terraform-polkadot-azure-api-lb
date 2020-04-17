@@ -1,13 +1,13 @@
-output "lb_public_ip" {
-  value = azurerm_public_ip.this.ip_address
+output "lb_endpoint_ip" {
+  value = var.use_external_lb ? azurerm_public_ip.this[0].ip_address : azurerm_lb.private[0].frontend_ip_configuration[0].private_ip_address
 }
 
 output "lb_frontend_ip_config_name" {
-  value = azurerm_lb.this.frontend_ip_configuration[0].name
+  value = var.use_external_lb ? azurerm_lb.public[0].frontend_ip_configuration[0].name : azurerm_lb.private[0].frontend_ip_configuration[0].name
 }
 
 output "lb_id" {
-  value = azurerm_lb.this.id
+  value = var.use_external_lb ? azurerm_lb.public[0].id : azurerm_lb.private[0].id
 }
 
 output "lb_backend_pool_id" {

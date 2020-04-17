@@ -54,16 +54,18 @@ No requirements.
 | owner | Owner of the infrastructure | `string` | `""` | no |
 | region | The Azure region to deploy in | `string` | `"eastus"` | no |
 | stage | The stage of the deployment | `string` | `""` | no |
+| subnet\_id | Subnet ID to deploy load balancer into | `string` | `""` | no |
+| use\_external\_lb | Bool to switch between public (true) or private (false) | `bool` | `true` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | lb\_backend\_pool\_id | n/a |
+| lb\_endpoint\_ip | n/a |
 | lb\_frontend\_ip\_config\_name | n/a |
 | lb\_health\_probe\_id | n/a |
 | lb\_id | n/a |
-| lb\_public\_ip | n/a |
 | lb\_rpc\_rule\_id | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

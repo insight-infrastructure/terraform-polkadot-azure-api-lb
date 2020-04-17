@@ -45,3 +45,15 @@ variable "region" {
   type        = string
   default     = "eastus"
 }
+
+variable "use_external_lb" {
+  description = "Bool to switch between public (true) or private (false)"
+  type        = bool
+  default     = true
+}
+
+variable "subnet_id" {
+  description = "Subnet ID to deploy load balancer into"
+  type        = string
+  default     = ""
+}
