@@ -33,7 +33,6 @@ resource "azurerm_lb" "public" {
 
   frontend_ip_configuration {
     name                 = "api-lb-pub-ip"
-    subnet_id            = var.subnet_id
     public_ip_address_id = azurerm_public_ip.this[0].id
   }
 }
