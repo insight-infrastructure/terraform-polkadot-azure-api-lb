@@ -33,10 +33,6 @@ module "this" {
 No issue is creating limit on this module.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Requirements
-
-No requirements.
-
 ## Providers
 
 | Name | Version |
@@ -46,15 +42,12 @@ No requirements.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+|------|-------------|------|---------|:-----:|
 | azure\_resource\_group\_name | Name of Azure Resource Group | `string` | n/a | yes |
-| environment | The environment | `string` | `""` | no |
-| namespace | The namespace to deploy into | `string` | `""` | no |
 | network\_name | The network name, ie kusama / mainnet | `string` | `""` | no |
-| owner | Owner of the infrastructure | `string` | `""` | no |
 | region | The Azure region to deploy in | `string` | `"eastus"` | no |
-| stage | The stage of the deployment | `string` | `""` | no |
 | subnet\_id | Subnet ID to deploy load balancer into | `string` | `""` | no |
+| tags | ####### Label ####### | `map(string)` | `{}` | no |
 | use\_external\_lb | Bool to switch between public (true) or private (false) | `bool` | `true` | no |
 
 ## Outputs

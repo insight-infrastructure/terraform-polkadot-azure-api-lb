@@ -1,16 +1,3 @@
-module "label" {
-  source = "github.com/robc-io/terraform-null-label.git?ref=0.16.1"
-  tags = {
-    NetworkName = var.network_name
-    Owner       = var.owner
-    Terraform   = true
-    VpcType     = "main"
-  }
-
-  environment = var.environment
-  namespace   = var.namespace
-  stage       = var.stage
-}
 
 data azurerm_resource_group "this" {
   name = var.azure_resource_group_name
@@ -29,7 +16,7 @@ resource "azurerm_lb" "public" {
   name                = "api-lb"
   location            = var.region
   resource_group_name = data.azurerm_resource_group.this.name
-  tags                = module.label.tags
+  tags                = var.tags
 
   frontend_ip_configuration {
     name                 = "api-lb-pub-ip"
@@ -42,7 +29,7 @@ resource "azurerm_lb" "private" {
   name                = "api-lb"
   location            = var.region
   resource_group_name = data.azurerm_resource_group.this.name
-  tags                = module.label.tags
+  tags                = var.tags
 
   frontend_ip_configuration {
     name                          = "api-lb-pub-ip"
