@@ -47,7 +47,7 @@ No issue is creating limit on this module.
 | network\_name | The network name, ie kusama / mainnet | `string` | `""` | no |
 | region | The Azure region to deploy in | `string` | `"eastus"` | no |
 | subnet\_id | Subnet ID to deploy load balancer into | `string` | `""` | no |
-| tags | ####### Label ####### | `map(string)` | `{}` | no |
+| tags | Tags in the form of key value pairs to associate with resources | `map(string)` | `{}` | no |
 | use\_external\_lb | Bool to switch between public (true) or private (false) | `bool` | `true` | no |
 
 ## Outputs
